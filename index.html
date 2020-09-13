@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="overlayrow" oncontextmenu="return false">
+        <div id="overlayleft"></div>
+        <div id="overlaycenter">
+            <div id="p1NameText"></div>
+            <div id="p2NameText"></div>
+            <div id="p2WeightText"></div>
+            <div id="p1ScoreText">0</div>
+            <div id="p2ScoreText">0</div>
+            <img id="attackericon" src="images/attacker.png">
+            <img id="defendericon" src="images/defender.png">
+        </div>
+        <div id="overlayright">
+            <img id="unitBans" src="images/unitban.png">
+        </div>
+    </div>
+    
+    <div id="controlrow">
+        <div class="column">
+            <div class="autocomplete">
+                <input type="text" name="p1Name" 
+                 id="p1NameInput" placeholder="Player 1 (Attacker) Name"
+                 oninput="changePlayer('p1NameText')">
+            </div>
+            <br><br>
+            <div class="colorselector">
+                Color:<br>
+                <input type="radio" name="p1color" id="red1">
+                <label for="red1">Red</label>
+                <input type="radio" name="p1color" id="blue1">
+                <label for="blue1">Blue</label><br>
+                <input type="radio" name="p1color" id="green1">
+                <label for="green1">Green</label>
+                <input type="radio" name="p1color" id="yellow1">
+                <label for="yellow1">Yellow</label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="autocomplete">
+                <input type="text" name="p2Name" 
+                 id="p2NameInput" placeholder="Player 2 (Defender) Name"
+                 oninput="changePlayer('p2NameText')">
+            </div>
+            <br><br>
+            <div class="colorselector">
+                Color:<br>
+                <input type="radio" name="p2color" id="red2">
+                <label for="red2">Red</label>
+                <input type="radio" name="p2color" id="blue2">
+                <label for="blue2">Blue</label><br>
+                <input type="radio" name="p2color" id="green2">
+                <label for="green2">Green</label>
+                <input type="radio" name="p2color" id="yellow2">
+                <label for="yellow2">Yellow</label>
+            </div>
+            <br>
+            <input type="number" name="p2Weight" id="p2Weight"
+            placeholder="Player 2 Weight" oninput="changeWeight()">
+        </div>
+        <div class="column">Unit bans WIP</div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        autocomplete(document.getElementById("p1NameInput"), players)
+        autocomplete(document.getElementById("p2NameInput"), players)
+    </script>
+</body>
+</html>
