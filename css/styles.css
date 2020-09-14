@@ -105,13 +105,17 @@ input {
 #p1NameText {
     top:58px;
     left:646px;
-    background-image: linear-gradient(rgb(0,0,0,0), #271D0E, #271D0E, rgb(0,0,0,0));
+    width:238px;
+    height:25px;
+    background-image: linear-gradient(rgb(0,0,0,0), #271D0E, #271D0E, #271D0E, rgb(0,0,0,0));
 }
 
 #p2NameText {
     top:58px;
     left:1055px;
-    background-image: linear-gradient(rgb(0,0,0,0), #271D0E, #271D0E, rgb(0,0,0,0));
+    width:238px;
+    height:25px;
+    background-image: linear-gradient(rgb(0,0,0,0), #271D0E, #271D0E, #271D0E, rgb(0,0,0,0));
 }
 
 #p2WeightText {
