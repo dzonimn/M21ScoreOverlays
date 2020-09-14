@@ -42,7 +42,8 @@ function changePlayer(idName) {
       $(`#${playerNo}ProfilePic`).css("background-repeat", "no-repeat")
       $(`#${playerNo}ProfilePic`).css("box-shadow", "inset 0px 3px 4px black")
     }).fail(function() {
-      // file does not exist
+      $(`#${playerNo}ProfilePic`).css("background", "none")
+      $(`#${playerNo}ProfilePic`).css("box-shadow", "none")
     })
 }
 
