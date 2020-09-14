@@ -86,6 +86,22 @@ input {
     text-align: left;
 }
 
+#p1ProfilePic {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    top: 43.5px;
+    left: 548px;
+}
+
+#p2ProfilePic {
+    width: 82px;
+    height: 82px;
+    left: 958px;
+    top: 43.5px;
+    border-radius: 50%;
+}
+
 #p1NameText {
     top:58px;
     left:646px;

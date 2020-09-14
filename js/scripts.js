@@ -1,9 +1,9 @@
-var players = ["Arilou","Big Pimpintosh","Daffy","Delthius","DoctorProfessorSirIsaac","EELuminatus",
+var players = ["Anki","Arilou","Big Pimpintosh","Daffy","Delthius","DoctorProfessorSirIsaac","EELuminatus",
                "elverdulerojorge","Enamel","Epicosity","FleurDeLys","Gigger Goris III","Heartseed",
                "Horus The Holy","Jakobi","James Bowring","JetEriksen","Jvela","Kerpa","Kin_Replica",
                "Kolaru","Legomann96","Marmu","Melvinfro","Mishi","mocaccino","MrZiggy","niccolaccio",
-               "Pigeon Rush","PremiumBow","qq","Raben Lied","roman","Sassy the Sasquatch","snetch",
-               "Sulomon","TheChild","ThisGuy","Trinitroglicerina","Trumpet","Wyld Kin"];
+               "Pigeon Rush","PremiumBow","qq","Raben Lied","roman","SassyMarquess","snetch",
+               "Tiki Gray","TheChild","ThisGuy","Trumpet","Wyld Kin"];
 players.sort();
 
 function refreshUnitBans() {
@@ -30,7 +30,20 @@ $("input.unitBanCheckboxes").on("change", function(evt) {
 
 function changePlayer(idName) {
   var idInputName = idName.slice(0,6) + "Input"
-  $("#" + idName).html($("#" + idInputName).val());
+  var playerName = $("#" + idInputName).val()
+  $("#" + idName).html(playerName);
+
+  var playerNo = idName.slice(0,2)
+  var url = `images/picons/${playerName.toLowerCase()}.png`
+  $.get(url)
+    .done(function() {
+      $(`#${playerNo}ProfilePic`).css("background", `url('${url}')`)
+      $(`#${playerNo}ProfilePic`).css("background-size", "100%")
+      $(`#${playerNo}ProfilePic`).css("background-repeat", "no-repeat")
+      $(`#${playerNo}ProfilePic`).css("box-shadow", "inset 0px 3px 4px black")
+    }).fail(function() {
+      // file does not exist
+    })
 }
 
 function changeWeight() {
@@ -206,11 +219,11 @@ function autocomplete(inp, arr) {
         if (elmnt != x[i] && elmnt != inp) {
         x[i].parentNode.removeChild(x[i]);
       }
+      refreshTexts();  // added this line to make the autofill update the texts
     }
   }
   /*execute a function when someone clicks in the document:*/
   document.addEventListener("click", function (e) {
       closeAllLists(e.target);
-      refreshTexts();  // added this line to make the autofill update the texts
   });
   }
