@@ -53,6 +53,18 @@ input {
 
 #overlayright {
     width: 5%;
+    padding-top: 20px;
+}
+
+#overlaynosign {
+    position: absolute;
+    width: 40px;
+    left: 1822px; top: 20px;
+}
+
+.nosignCircle {
+    width: 80px;
+    padding-bottom: 3px;
 }
 
 #controlrow {
@@ -119,9 +131,9 @@ input {
     left: 1289px;
 }
 
-#unitBans {
-    position: absolute;
-    top: 40px;
+.unitCircle {
+    width: 60px;
+    padding-bottom: 20px;
 }
 
 #unitSelector {

@@ -6,6 +6,20 @@ var players = ["Arilou","Big Pimpintosh","Daffy","Delthius","DoctorProfessorSirI
                "Sulomon","TheChild","ThisGuy","Trinitroglicerina","Trumpet","Wyld Kin"];
 players.sort();
 
+function refreshUnitBans() {
+  var selectedUnits = [];
+  $.each($(".unitBanCheckboxes:checked"), function() {
+    selectedUnits.push($(this).attr("id"))
+  })
+  
+  $("#unitcirclecontainer").empty()
+  $("#overlaynosign").empty()
+  $.each(selectedUnits, function() {
+    $("#unitcirclecontainer").append(`<img class="unitCircle" src="images/units/${this}.png">`)
+    $("#overlaynosign").append(`<img class="nosignCircle" src="images/units/nosign.png">`)
+  })
+}
+
 var unitBanLimit = 2;
 $("input.unitBanCheckboxes").on("change", function(evt) {
   if ($(this).siblings(":checked").length >= unitBanLimit) {
