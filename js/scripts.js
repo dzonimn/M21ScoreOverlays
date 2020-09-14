@@ -6,6 +6,14 @@ var players = ["Arilou","Big Pimpintosh","Daffy","Delthius","DoctorProfessorSirI
                "Sulomon","TheChild","ThisGuy","Trinitroglicerina","Trumpet","Wyld Kin"];
 players.sort();
 
+var unitBanLimit = 2;
+$("input.unitBanCheckboxes").on("change", function(evt) {
+  if ($(this).siblings(":checked").length >= unitBanLimit) {
+    this.checked = false;
+  }
+  refreshUnitBans();
+})
+
 function changePlayer(idName) {
   var idInputName = idName.slice(0,6) + "Input"
   $("#" + idName).html($("#" + idInputName).val());

@@ -66,6 +66,10 @@ input {
     flex:50%;
 }
 
+.unitBanImage {
+    width: 400px;
+}
+
 #colorselector {
     text-align: left;
 }
@@ -118,6 +122,21 @@ input {
 #unitBans {
     position: absolute;
     top: 40px;
+}
+
+#unitSelector {
+    position: relative;
+}
+
+/* unit ban checkbox positions */
+
+.unitSelectorGridContainer {
+    position: absolute;
+    left: 59px;
+    top: 55px;
+    display: grid;
+    grid-template-columns: 64px 64px 64px 64px 64px;
+    grid-template-rows: 76px 83px;
 }
 
 /* autocomplete styling from https://www.w3schools.com/howto/howto_js_autocomplete.asp */
