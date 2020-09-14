@@ -80,19 +80,19 @@ $("[name='p2color']").click(function () {
 });
 
 $("#p1ScoreText").click(function() {
-  $("#p1ScoreText").html(parseInt($("#p1ScoreText").html(),10)+1);
+  $(this).html(parseInt($(this).html(),10)+1);
 });
 
 $("#p2ScoreText").click(function() {
-  $("#p2ScoreText").html(parseInt($("#p2ScoreText").html(),10)+1);
+  $(this).html(parseInt($(this).html(),10)+1);
 });
 
 $("#p1ScoreText").contextmenu(function() {
-  $("#p1ScoreText").html(parseInt($("#p1ScoreText").html(),10)-1);
+  $(this).html(parseInt($(this).html(),10)-1);
 });
 
 $("#p2ScoreText").contextmenu(function() {
-  $("#p2ScoreText").html(parseInt($("#p2ScoreText").html(),10)-1);
+  $(this).html(parseInt($(this).html(),10)-1);
 });
 
 // for updating all texts after using the autofiller
