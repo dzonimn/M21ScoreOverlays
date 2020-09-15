@@ -136,7 +136,7 @@ input {
     padding-top: 2px;
     width: 50px;
     height: 50px;
-    background-image: url("/images/scoreFrame.png");
+    background-image: url("../images/scoreFrame.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -149,7 +149,7 @@ input {
     padding-top: 2px;
     width: 50px;
     height: 50px;
-    background-image: url("/images/scoreFrame.png");
+    background-image: url("../images/scoreFrame.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
