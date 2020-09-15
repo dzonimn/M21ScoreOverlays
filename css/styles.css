@@ -121,6 +121,11 @@ input {
 #p2WeightText {
     top:20px;
     left:1170px;
+    text-shadow:
+        -2px -2px 0 #000,  
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
 }
 
 #p1ScoreText {
@@ -128,8 +133,12 @@ input {
     top: 37px;
     left: 875px;
     text-align: center;
-    width: 36px;
-    height: 36px;
+    padding-top: 2px;
+    width: 50px;
+    height: 50px;
+    background-image: url("/images/scoreFrame.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #p2ScoreText {
@@ -137,8 +146,12 @@ input {
     top: 37px;
     left: 1287px;
     text-align: center;
-    width: 36px;
-    height: 36px;
+    padding-top: 2px;
+    width: 50px;
+    height: 50px;
+    background-image: url("/images/scoreFrame.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 #attackericon {
